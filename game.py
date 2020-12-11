@@ -169,7 +169,14 @@ def play_game(genomes, config):
         best_foods = max(best_foods, food_count)
         best_fitness = max(best_fitness, genome.fitness)
         # if gu.debug_on:
-        print(f"Generation {generation_number} \tGenome {genome_number} \tFoods {food_count} \tBF {best_foods} \tFitness {genome.fitness} \tBest fitness {best_fitness} \tScore {score}")
+        roudn_places = 5;
+        print(f"Generation {generation_number} \t" + \
+              f"Genome {genome_number} \t" + \
+              f"Foods {food_count} \t" + \
+              f"BF {best_foods} \t" + \
+              f"Fitness {round(genome.fitness, roudn_places)}  \t" + \
+              f"Best fitness {round(best_fitness, roudn_places)}  \t" + \
+              f"Score {round(score, roudn_places)}")
         genome_number += 1
     # end of for loop, all genomes are done
 
