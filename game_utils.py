@@ -1,6 +1,6 @@
 import os
 import math
-import pickle
+import pickle5 as pickle
 import numpy as np
 
 pop_data_file = 'data/population.dat'
